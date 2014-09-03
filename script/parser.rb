@@ -5,7 +5,6 @@ module Generator
     attr_reader :objects
     attr_accessor :filename
 
-
     # The way the content is being generated only differs on one char
     # By defining them here, we can use a function (see generate_regex) to create all necessary regex
     TITLE_CHAR = '!'
@@ -30,6 +29,7 @@ module Generator
     CONTENT = Parser.generate_regex(CONTENT_CHAR)
     DATE = Parser.generate_regex(DATE_CHAR)
     CLOSE = Parser.generate_regex(CLOSE_CHAR)     # Optional closing character
+    TEXT = /^[\s]*(?<text>.+)$/                   # Capturing multiline text
     ESCAPE = /^.*(\\[#+=!-])+.*$/                 # Captures escaping characters
 
     # objects: Set of objects that are read from the file
@@ -63,11 +63,13 @@ module Generator
       when Parser::TITLE
         push_title(str)
       when Parser::CONTENT
-        push_content(str)
+        push_content(str, :append => false)
       when Parser::DATE
         push_date(str)
       when Parser::CLOSE
         close_object
+      when Parser::TEXT
+        push_content(str, :append => true)
       end
     end
 
@@ -86,8 +88,12 @@ module Generator
       @current_object[:title] = str.delete(Parser::TITLE_CHAR).strip
     end
 
-    def push_content(str)
-      @current_object[:content] = str.delete(Parser::CONTENT_CHAR).strip
+    def push_content(str, options = {})
+      if options[:append]
+        @current_object[:content] += str
+      else
+        @current_object[:content] = str.delete(Parser::CONTENT_CHAR)
+      end
     end
 
     def push_date(str)

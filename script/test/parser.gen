@@ -7,13 +7,14 @@
 
 ! Title 2
 - Content 2
-+ Content 3
++ Date 2
 = # Optional closing character
 
 # Comment inside \! escaping character
 
 ! Title 3
 - Content 3
+With multiline text
 
 !Title 4
 + Date 4
