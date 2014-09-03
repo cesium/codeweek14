@@ -21,8 +21,13 @@ class Bootstrap
   end
 
   # Generate the HTML index
-  def self.generate target
+  def self.generate(target)
     Generator::Base.new(target).generate
+  end
+
+  def self.deploy
+    current_branch = `git branch`.split("\n").select { |branch| branch[0] == '*' }.first.delete('*').strip
+    `git checkout gh-pages; git merge #{current_branch}; git push; git checkout #{current_branch}`
   end
 
   def self.run(args)
