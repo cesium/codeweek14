@@ -1,16 +1,13 @@
 #!/usr/bin/env ruby
-# .gen file format:
-# # comment
-# ! title
-# - content
-# + date
-# = close object (optional)
 
 module Generator
   class Parser
     attr_reader :objects
     attr_accessor :filename
 
+
+    # The way the content is being generated only differs on one char
+    # By defining them here, we can use a function (see generate_regex) to create all necessary regex
     TITLE_CHAR = '!'
     CONTENT_CHAR = '-'
     DATE_CHAR = '\+'
@@ -35,14 +32,16 @@ module Generator
     CLOSE = Parser.generate_regex(CLOSE_CHAR)     # Optional closing character
     ESCAPE = /^.*(\\[#+=!-])+.*$/                 # Captures escaping characters
 
-    #private_constant :TITLE_CHAR, :CONTENT_CHAR, :DATE_CHAR, :CLOSE_CHAR
-
+    # objects: Set of objects that are read from the file
+    # current_object: Self explanatory
+    # filename: Name of the file to be read
     def initialize(filename)
       @objects = []
       @current_object = {}
       @filename = filename
     end
 
+    # Iterates each line and matches a set of regex to determine its meaning
     def read_file
       File.open(filename, 'r').each_line do |line|
         content = Parser::COMMENT.match(line)[:content]
@@ -53,10 +52,12 @@ module Generator
       @objects
     end
 
+    # Escapes characters: +=#!- are all used in the filetype, if we want to use them, we need to escape them
     def self.escape_characters(str)
       str.gsub(ESCAPE) { |match| match[1] }
     end
 
+    # Checks the line meaning, pushing it into the current_object if necessary
     def objectify(str)
       case str
       when Parser::TITLE
@@ -72,11 +73,14 @@ module Generator
 
   private
 
+    # Adds the object to the list and creates a new one
     def close_object
       @objects.push(@current_object)
       @current_object = {}
     end
 
+    # Closes and pushes the current object if it hasn't been done
+    # Creates a new one with the title attribute
     def push_title(str)
       close_object unless @current_object.empty?
       @current_object[:title] = str.delete(Parser::TITLE_CHAR).strip
