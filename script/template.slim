@@ -1,0 +1,32 @@
+doctype html
+html.no-js lang="en"
+  head
+    meta charset="UTF-8"
+      meta content="width=device-width, initial-scale=1" name="viewport"
+        link href="css/reset.css" rel="stylesheet"
+          /! CSS reset
+          link href="css/style.css" rel="stylesheet"
+            /! Resource style
+            script src="js/modernizr.js"
+            /! Modernizr
+            title Code Week @ UMinho
+  body
+    header
+      h1 Code Week
+    section#cd-timeline.cd-container
+      - objects.each do |object|
+        .cd-timeline-block
+          .cd-timeline-img.cd-location
+            img alt="Location" src="img/cd-icon-location.svg"
+          /! cd-timeline-img
+          .cd-timeline-content
+            h2 = object[:title]
+            p = object[:content]
+            a.cd-read-more href="#0"  Read more
+            span.cd-date = object[:date]
+          /! cd-timeline-content
+        /! cd-timeline-block
+    /! cd-timeline
+    script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    script src="js/main.js"
+    /! Resource jQuery
