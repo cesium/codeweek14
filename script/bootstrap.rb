@@ -27,7 +27,8 @@ class Bootstrap
 
 	def self.deploy
 		current_branch = `git branch`.split("\n").select { |branch| branch[0] == '*' }.first.delete('*').strip
-		`git checkout gh-pages; git merge #{current_branch}; git push; git checkout #{current_branch}`
+		`git checkout gh-pages; git rebase #{current_branch}`
+		`git push; git checkout #{current_branch}`
 	end
 
 	def self.run(args)
