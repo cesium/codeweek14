@@ -44,6 +44,7 @@ class Bootstrap
 		changed_sass.each { |file| `sass #{file} > css/#{file.split('/')[-1].gsub('.scss', '.css') }` }
 	end
 
+	# Generates HTML index and updates sass files
   def self.gen_sass(target)
     Bootstrap.generate(target)
     Bootstrap.sass
