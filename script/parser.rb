@@ -7,10 +7,10 @@ module Generator
 
     # The way the content is being generated only differs on one char
     # By defining them here, we can use a function (see generate_regex) to create all necessary regex
-    TITLE_CHAR = '!'
-    CONTENT_CHAR = '-'
-    DATE_CHAR = '\+'
-    CLOSE_CHAR = '='
+    TITLE_CHAR = ':t'
+    CONTENT_CHAR = ':c'
+    DATE_CHAR = ':d'
+    IMAGE_CHAR = ':i'
 
     # [\s]* matches leading whitespaces
     # ([^#]*) captures the content in the content group
@@ -28,9 +28,10 @@ module Generator
     TITLE = Parser.generate_regex(TITLE_CHAR)
     CONTENT = Parser.generate_regex(CONTENT_CHAR)
     DATE = Parser.generate_regex(DATE_CHAR)
-    CLOSE = Parser.generate_regex(CLOSE_CHAR)     # Optional closing character
+    IMAGE = Parser.generate_regex(IMAGE_CHAR)
     TEXT = /^[\s]*(?<text>.+)$/                   # Capturing multiline text
-    ESCAPE = /^.*(\\[#+=!-])+.*$/                 # Captures escaping characters
+    ESCAPE = /^.*(\\:)+.*$/                 # Captures escaping characters
+
 
     # objects: Set of objects that are read from the file
     # current_object: Self explanatory
@@ -66,8 +67,8 @@ module Generator
         push_content(str, :append => false)
       when Parser::DATE
         push_date(str)
-      when Parser::CLOSE
-        close_object
+      when Parser::IMAGE
+        push_image(str)
       when Parser::TEXT
         push_content(str, :append => true)
       end
@@ -85,19 +86,23 @@ module Generator
     # Creates a new one with the title attribute
     def push_title(str)
       close_object unless @current_object.empty?
-      @current_object[:title] = str.delete(Parser::TITLE_CHAR).strip
+      @current_object[:title] = str.gsub(Parser::TITLE_CHAR, "").strip
     end
 
     def push_content(str, options = {})
       if options[:append]
         @current_object[:content] += str
       else
-        @current_object[:content] = str.delete(Parser::CONTENT_CHAR)
+        @current_object[:content] = str.gsub(Parser::CONTENT_CHAR, "")
       end
     end
 
     def push_date(str)
-      @current_object[:date] = str.delete(Parser::DATE_CHAR).strip
+      @current_object[:date] = str.gsub(Parser::DATE_CHAR, "").strip
+    end
+
+    def push_image(str)
+      @current_object[:image] = str.gsub(Parser::IMAGE_CHAR, "").strip
     end
 
   end

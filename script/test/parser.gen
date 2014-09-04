@@ -1,24 +1,22 @@
 # Comment
 # This should not appear
 
-! Title 1
-- Content 1
-+ Date 1
+:t Title 1
+:c Content 1
+:d Date 1
+:i img/cd-icon-location.svg
 
-! Title 2
-- Content 2
-+ Date 2
-= # Optional closing character
+:t Title 2
+:c Content 2
+:d Date 2
+:i img/cd-icon-location.svg
 
-# Comment inside \! escaping character
+:t Title 3
+:c Content 3
+:d Date 3
+:i img/cd-icon-location.svg
 
-! Title 3
-- Content 3
-With multiline text
-
-!Title 4
-+ Date 4
-
-- Content 4 + No character escaped
-
-! Title 6
+:t Title 4
+:c Content 4
+:d Date 4
+:i img/cd-icon-location.svg
