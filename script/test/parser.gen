@@ -4,19 +4,19 @@
 :t Title 1
 :c Content 1
 :d Date 1
-:i img/cd-icon-location.svg
+:i cd-icon-location.svg
 
 :t Title 2
 :c Content 2
 :d Date 2
-:i img/cd-icon-location.svg
+:i cd-icon-location.svg
 
 :t Title 3
 :c Content 3
 :d Date 3
-:i img/cd-icon-location.svg
+:i cd-icon-location.svg
 
 :t Title 4
 :c Content 4
 :d Date 4
-:i img/cd-icon-location.svg
+:i cd-icon-location.svg
