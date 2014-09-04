@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:700);
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -32,7 +32,7 @@ h1, h2 {
   font-family: "Droid Sans", sans-serif;
   font-weight: bold; }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -48,9 +48,9 @@ Modules - reusable parts of our design
     display: table;
     clear: both; }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 header {

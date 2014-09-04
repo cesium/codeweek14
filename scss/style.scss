@@ -6,7 +6,7 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -45,7 +45,7 @@ h1, h2 {
 	font-weight: bold;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -63,9 +63,9 @@ Modules - reusable parts of our design
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 
@@ -381,4 +381,3 @@ header {
 		@include transform(translateX(0));
 	}
 }
-
