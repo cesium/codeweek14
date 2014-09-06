@@ -16,17 +16,18 @@ header
 
 nav
   width: 100%
-  margin: 0 auto
   position: relative
-  z-index: 99
+  text-align: center
+  background-color: $bg-color
+  height: 50px
   ul
     list-style-type: none
+    display: inline-block
     width: 100%
-    margin: 0 auto
     li
       display: inline
       a
-        display: inline-block
+        margin: auto 5px
         color: $dark-gray
         cursor: pointer
         font-family: $open
@@ -39,6 +40,11 @@ nav
 
         &:hover, &:focus
           border-bottom: 2px solid $cesium
+
+.fixed
+  position: fixed
+  top: 0
+  z-index: 1
 
 .separator
   color: rgba($dark-gray, 0.4)
