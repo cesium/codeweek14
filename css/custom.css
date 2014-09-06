@@ -1,0 +1,13 @@
+header {
+  height: 500px;
+  width: 100%;
+  background: url("../img/banner.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-color: #F3F5F4;
+}

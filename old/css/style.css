@@ -1,6 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:300);
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:700);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:700);
 /* --------------------------------
 
 Primary style
@@ -19,7 +18,7 @@ body {
   font-size: 100%;
   font-family: Tahoma, sans-serif;
   color: #7f8c97;
-  background-color: #9c6a79; }
+  background-color: #fff; }
 
 a {
   color: #acb7c0;
@@ -55,21 +54,13 @@ Main components
 
 -------------------------------- */
 header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49; }
-  header h1 {
-    color: #eceddc;
-    font-size: 18px;
-    font-size: 1.125rem; }
-  @media only screen and (min-width: 1170px) {
-    header {
-      height: 300px;
-      line-height: 300px; }
-      header h1 {
-        font-size: 24px;
-        font-size: 1.5rem; } }
+  height: 500px;
+  width: 100%;
+  background: url("../img/banner.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 #cd-timeline {
   position: relative;
@@ -84,7 +75,7 @@ header {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #8e5e6d; }
+    background: #f2f2f2; }
   @media only screen and (min-width: 1170px) {
     #cd-timeline {
       margin-top: 3em;
@@ -197,7 +188,7 @@ header {
   background: #eceddc;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #8e5e6d;
+  box-shadow: 0 3px 0 #f2f2f2;
   background-color: #eceddc; }
   .cd-timeline-content:after {
     content: "";

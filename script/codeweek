@@ -1,59 +1,54 @@
 :t CODERDOJO
-:c Meetup | 18h @ A2-DI
-:d SÁBADO
-:dm 11 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 11 SÁB
+:dm 18h @ DI A2
+
+:t RAILS GIRLS BRAGA
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 12 DOM
+:dm 18h @ DI A2
 
 :t IMPROVE BRAGA
-:c Meetup | 18h @ A2-DI
-:d SÁBADO
-:dm 11 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:dm 18h @ DI A2
 
 :t DI GOES RETRO
-:c Meetup | 18h @ A2-DI.
-:d SEGUNDA
-:dm 13 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 13 SEG
+:dm 18h @ DI A2
 
-:t BRACKERSPACE
-:c Meetup | 18h @ A2-DI
-:d SEGUNDA
-:dm 13 DE SETEMBRO
-:i cd-icon-location.svg
+:t RUBYCONF PT
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:dm 18h @ DI A2
+
+:t RUBYCONF PT
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 14 TER
+:dm 18h @ DI A2
 
 :t MEETING JAVA 8
-:c Workshop | 18h @ A2-DI
-:d TERÇA
-:dm 14 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:dm 18h @ DI A2
 
 :t RIDING RAILS
-:c Workshop | 18h @ A2-DI
-:d QUARTA
-:dm 15 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 15 QUA
+:dm 18h @ DI A2
 
-:t PUPPET
-:c Workshop | 18h @ A2-DI
-:d QUINTA
-:dm 16 DE SETEMBRO
-:i cd-icon-location.svg
+:t SERVER AUTOMATION
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 16 QUI
+:dm 18h @ DI A2
 
-:t MINHO.RB
-:c Meetup | 18h @ A2-DI
-:d QUINTA
-:dm 16 DE SETEMBRO
-:i cd-icon-location.svg
+:t BRACKERSPACE
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:dm 18h @ DI A2
 
 :t JOGOS ELETRÓNICOS
-:c Jogos | 18h @ A2-DI.
-:d SEXTA
-:dm 16 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:d 17 SEX
+:dm 18h @ DI A2
 
 :t DESAFIO ALGORITMO
-:c Meetup | 18h @ A2-DI
-:d SEXTA
-:dm 16 DE SETEMBRO
-:i cd-icon-location.svg
+:c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+:dm 18h @ DI A2

@@ -40,9 +40,9 @@ class Bootstrap
 	# Update changed sass files
 	def self.sass
 		# Selects changed files using git
-		changed_sass = `git diff --name-only`.split("\n").select { |file| file.match(/scss\/.+/) }
+		changed_sass = `git diff --name-only`.split("\n").select { |file| file.match(/sass\/[^\_].+/) }
 		# Generates the corresponding css file with the same name
-		changed_sass.each { |file| `sass #{file} > css/#{file.split('/')[-1].gsub('.scss', '.css') }` }
+		changed_sass.each { |file| `sass #{file} > css/#{file.split('/')[-1].gsub('.sass', '.css') }` }
 	end
 
 	# Generates HTML index and updates sass files

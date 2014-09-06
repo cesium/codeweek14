@@ -2,35 +2,19 @@
 
 module Generator
   class Parser
-    attr_reader :objects
-    attr_accessor :filename
-
     # The way the content is being generated only differs on one char
     # By defining them here, we can use a function (see generate_regex) to create all necessary regex
-    TITLE_CHAR = ':t'
-    CONTENT_CHAR = ':c'
-    DATE_CHAR = ':d'
-    DATE_MORE_CHAR = ':dm'
-    IMAGE_CHAR = ':i'
+    TITLE = ':t'
+    CONTENT = ':c'
+    DATE = ':d'
+    DATE_MORE = ':dm'
+    IMAGE = ':i'
 
     # [\s]* matches leading whitespaces
     # ([^#]*) captures the content in the content group
     # #? matches the comment character
     # (.*) captures the comment in the comment group
     COMMENT = /^[\s]*(?<content>[^#]*)#?(?<comment>.*)$/
-
-    def self.generate_regex(char)
-      # #{char} matches the wanted character on the line start
-      # [\s]* matches leading whitespaces
-      # (.+) captures the valuable content
-      /^#{char}(.*)$/
-    end
-
-    TITLE = Parser.generate_regex(TITLE_CHAR)
-    CONTENT = Parser.generate_regex(CONTENT_CHAR)
-    DATE = Parser.generate_regex(DATE_CHAR)
-    DATE_MORE = Parser.generate_regex(DATE_MORE_CHAR)
-    IMAGE = Parser.generate_regex(IMAGE_CHAR)
     TEXT = /^[\s]*(?<text>.+)$/                   # Capturing multiline text
     ESCAPE = /^.*(\\:)+.*$/                 # Captures escaping characters
 
@@ -46,7 +30,7 @@ module Generator
 
     # Iterates each line and matches a set of regex to determine its meaning
     def read_file
-      File.open(filename, 'r').each_line do |line|
+      File.open(@filename, 'r').each_line do |line|
         content = Parser::COMMENT.match(line)[:content]
         objectify( Parser.escape_characters(content) )
       end
@@ -63,19 +47,27 @@ module Generator
     # Checks the line meaning, pushing it into the current_object if necessary
     def objectify(str)
       case str
-      when Parser::TITLE
+      when Parser.regex_matcher(TITLE)
         push_title(str)
-      when Parser::CONTENT
+      when Parser.regex_matcher(CONTENT)
         push_content(str, :append => false)
-      when Parser::DATE_MORE
-        push_date_more(str)
-      when Parser::DATE
-        push_date(str)
-      when Parser::IMAGE
-        push_image(str)
+      when Parser.regex_matcher(DATE_MORE)
+        push_attribute(:date_more, Parser::DATE_MORE, str)
+      when Parser.regex_matcher(DATE)
+        push_attribute(:date, Parser::DATE, str)
+      when Parser.regex_matcher(IMAGE)
+        push_attribute(:image, Parser::IMAGE, str)
       when Parser::TEXT
         push_content(str, :append => true)
       end
+    end
+
+
+      # #{char} matches the wanted character on the line start
+    def self.regex_matcher(char)
+      # [\s]* matches leading whitespaces
+      # (.+) captures the valuable content
+      /^#{char}(.*)$/
     end
 
   private
@@ -90,28 +82,19 @@ module Generator
     # Creates a new one with the title attribute
     def push_title(str)
       close_object unless @current_object.empty?
-      @current_object[:title] = str.gsub(Parser::TITLE_CHAR, "").strip
+      @current_object[:title] = str.gsub(Parser::TITLE, "").strip
     end
 
     def push_content(str, options = {})
       if options[:append]
         @current_object[:content] += str
       else
-        @current_object[:content] = str.gsub(Parser::CONTENT_CHAR, "")
+        @current_object[:content] = str.gsub(Parser::CONTENT, "")
       end
     end
 
-    def push_date(str)
-      @current_object[:date] = str.gsub(Parser::DATE_CHAR, "").strip
-    end
-
-    def push_date_more(str)
-      @current_object[:date_more] = str.gsub(Parser::DATE_MORE_CHAR, "").strip
-    end
-
-
-    def push_image(str)
-      @current_object[:image] = str.gsub(Parser::IMAGE_CHAR, "").strip
+    def push_attribute(attr, char, str)
+      @current_object[attr] = str.gsub(char, "").strip
     end
 
   end

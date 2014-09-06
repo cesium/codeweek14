@@ -70,24 +70,13 @@ Main components
 -------------------------------- */
 
 header {
-	height: 200px;
-	line-height: 200px;
-	text-align: center;
-	background: $color-1;
-
-	h1 {
-		color: $color-3;
-		@include font-size(18px);
-	}
-
-	@include MQ(L) {
-		height: 300px;
-		line-height: 300px;
-
-		h1 {
-			@include font-size(24px);
-		}
-	}
+	height: 500px;
+	width: 100%;
+	background: url('../img/banner.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #cd-timeline {
