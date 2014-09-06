@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
 /* --------------------------------
 
 Primary style
@@ -16,7 +17,7 @@ html * {
 
 body {
   font-size: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: Tahoma, sans-serif;
   color: #7f8c97;
   background-color: #9c6a79; }
 
@@ -59,7 +60,7 @@ header {
   text-align: center;
   background: #303e49; }
   header h1 {
-    color: #ffffff;
+    color: #eceddc;
     font-size: 18px;
     font-size: 1.125rem; }
   @media only screen and (min-width: 1170px) {
@@ -118,7 +119,7 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 0 0 4px #eceddc, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05); }
   .cd-timeline-img img {
     display: block;
     width: 24px;
@@ -193,7 +194,7 @@ header {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: #ffffff;
+  background: #eceddc;
   border-radius: 0.25em;
   padding: 1em;
   box-shadow: 0 3px 0 #8e5e6d;
@@ -204,26 +205,35 @@ header {
     clear: both; }
   .cd-timeline-content h2 {
     color: #303e49; }
-  .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  .cd-timeline-content p, .cd-timeline-content .cd-read-more {
     font-size: 13px;
     font-size: 0.8125rem; }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     display: inline-block; }
   .cd-timeline-content p {
-    margin: 1em 0;
+    margin: 0;
+    margin-bottom: 20px;
     line-height: 1.6; }
   .cd-timeline-content .cd-read-more {
     float: right;
     padding: .8em 1em;
     background: #acb7c0;
-    color: #ffffff;
+    color: #eceddc;
     border-radius: 0.25em; }
     .no-touch .cd-timeline-content .cd-read-more:hover {
       background-color: #bac4cb; }
-  .cd-timeline-content .cd-date {
+  .cd-timeline-content .cd-date, .cd-timeline-content .cd-date-more {
     float: left;
     padding: .8em 0;
-    opacity: .7; }
+    opacity: .7;
+    font-size: 28px;
+    font-weight: bold;
+    color: white; }
+  .cd-timeline-content span.cd-date-more {
+    margin-top: 35px;
+    font-size: 20px;
+    font-weight: normal;
+    color: white; }
   .cd-timeline-content::before {
     content: '';
     position: absolute;
@@ -232,7 +242,7 @@ header {
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid #ffffff; }
+    border-right: 7px solid #eceddc; }
   @media only screen and (min-width: 768px) {
     .cd-timeline-content h2 {
       font-size: 20px;
@@ -240,7 +250,7 @@ header {
     .cd-timeline-content p {
       font-size: 16px;
       font-size: 1rem; }
-    .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    .cd-timeline-content .cd-read-more {
       font-size: 14px;
       font-size: 0.875rem; } }
   @media only screen and (min-width: 1170px) {
@@ -252,16 +262,14 @@ header {
         top: 24px;
         left: 100%;
         border-color: transparent;
-        border-left-color: #ffffff; }
+        border-left-color: #eceddc; }
       .cd-timeline-content .cd-read-more {
         float: left; }
-      .cd-timeline-content .cd-date {
+      .cd-timeline-content .cd-date, .cd-timeline-content .cd-date-more {
         position: absolute;
         width: 100%;
         left: 122%;
-        top: 6px;
-        font-size: 16px;
-        font-size: 1rem; }
+        top: -15px; }
       .cd-timeline-block:nth-child(even) .cd-timeline-content {
         float: right; }
         .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
@@ -269,10 +277,10 @@ header {
           left: auto;
           right: 100%;
           border-color: transparent;
-          border-right-color: #ffffff; }
+          border-right-color: #eceddc; }
         .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
           float: right; }
-        .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+        .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date, .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date-more {
           left: auto;
           right: 122%;
           text-align: right; }

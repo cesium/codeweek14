@@ -231,7 +231,7 @@ header {
 		color: $color-1;
 	}
 
-	p, .cd-read-more, .cd-date {
+	p, .cd-read-more {
 		@include font-size(13px);
 	}
 
@@ -240,7 +240,8 @@ header {
 	}
 
 	p {
-		margin: 1em 0;
+		margin: 0;
+		margin-bottom: 20px;
 		line-height: 1.6;
 	}
 
@@ -256,10 +257,20 @@ header {
 		}
 	}
 
-	.cd-date {
+	.cd-date, .cd-date-more {
 		float: left;
 		padding: .8em 0;
 		opacity: .7;
+		font-size: 28px;
+		font-weight: bold;
+		color: white;
+	}
+
+	span.cd-date-more {
+		margin-top: 35px;
+		font-size: 20px;
+		font-weight: normal;
+		color: white;
 	}
 
 	&::before {
@@ -282,7 +293,7 @@ header {
 			@include font-size(16px);
 		}
 
-		.cd-read-more, .cd-date {
+		.cd-read-more {
 			@include font-size(14px);
 		}
 	}
@@ -303,12 +314,11 @@ header {
 			float: left;
 		}
 
-		.cd-date {
+		.cd-date, .cd-date-more {
 			position: absolute;
 			width: 100%;
 			left: 122%;
-			top: 6px;
-			@include font-size(16px);
+			top: -15px;
 		}
 
 		.cd-timeline-block:nth-child(even) & {
@@ -326,7 +336,7 @@ header {
 				float: right;
 			}
 
-			.cd-date {
+			.cd-date, .cd-date-more {
 				left: auto;
 				right: 122%;
 				text-align: right;

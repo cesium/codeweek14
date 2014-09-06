@@ -10,6 +10,7 @@ module Generator
     TITLE_CHAR = ':t'
     CONTENT_CHAR = ':c'
     DATE_CHAR = ':d'
+    DATE_MORE_CHAR = ':dm'
     IMAGE_CHAR = ':i'
 
     # [\s]* matches leading whitespaces
@@ -28,6 +29,7 @@ module Generator
     TITLE = Parser.generate_regex(TITLE_CHAR)
     CONTENT = Parser.generate_regex(CONTENT_CHAR)
     DATE = Parser.generate_regex(DATE_CHAR)
+    DATE_MORE = Parser.generate_regex(DATE_MORE_CHAR)
     IMAGE = Parser.generate_regex(IMAGE_CHAR)
     TEXT = /^[\s]*(?<text>.+)$/                   # Capturing multiline text
     ESCAPE = /^.*(\\:)+.*$/                 # Captures escaping characters
@@ -65,6 +67,8 @@ module Generator
         push_title(str)
       when Parser::CONTENT
         push_content(str, :append => false)
+      when Parser::DATE_MORE
+        push_date_more(str)
       when Parser::DATE
         push_date(str)
       when Parser::IMAGE
@@ -100,6 +104,11 @@ module Generator
     def push_date(str)
       @current_object[:date] = str.gsub(Parser::DATE_CHAR, "").strip
     end
+
+    def push_date_more(str)
+      @current_object[:date_more] = str.gsub(Parser::DATE_MORE_CHAR, "").strip
+    end
+
 
     def push_image(str)
       @current_object[:image] = str.gsub(Parser::IMAGE_CHAR, "").strip
