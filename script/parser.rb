@@ -16,7 +16,7 @@ module Generator
     # (.*) captures the comment in the comment group
     COMMENT = /^[\s]*(?<content>[^#]*)#?(?<comment>.*)$/
     TEXT = /^[\s]*(?<text>.+)$/                   # Capturing multiline text
-    ESCAPE = /^.*(\\:)+.*$/                 # Captures escaping characters
+    ESCAPE = /^.*(\\:)+.*$/                       # Captures escaping characters
 
 
     # objects: Set of objects that are read from the file

@@ -16,8 +16,18 @@ body
 
 hr
   opacity: 0.6
-  width: 50%
-  height: 1px
+  width: 75%
+
+.starred
+  background-position: top center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  width: 100%
+  height: 120px
+  margin-top: 10px
+//  border-radius: 5px
 
 // Selectors to override the defaults from the event divs
 .cbp_tmtimeline > li .cbp_tmlabel
@@ -25,9 +35,25 @@ hr
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel
   background-color: $cesium
+  &::after
+    border-right-color: $cesium
 
 .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel
   background-color: $dark-gray
+  &::after
+    border-right-color: $dark-gray
+
+.cbp_tmlabel::after
+  right: 100%
+  border: solid transparent
+  content: ""
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+  border-width: 10px
+  top: 20px
+  box-sizing: border-box
 
 h2.title
   margin: 0 0 -10px 0
@@ -43,7 +69,7 @@ p.content
 .cbp_tmtimeline > li .cbp_tmtime span:first-child
   font-family: $droid
   font-size: 40px
-  text-decoration: underline
+  margin-top: 5px
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:first-child
   color: $dark-gray

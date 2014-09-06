@@ -15,17 +15,42 @@ body {
 
 hr {
   opacity: 0.6;
-  width: 50%;
-  height: 1px; }
+  width: 75%; }
+
+.starred {
+  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 120px;
+  margin-top: 10px; }
 
 .cbp_tmtimeline > li .cbp_tmlabel {
   padding: 20px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
   background-color: #ed7950; }
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel::after {
+    border-right-color: #ed7950; }
 
 .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel {
   background-color: #333333; }
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel::after {
+    border-right-color: #333333; }
+
+.cbp_tmlabel::after {
+  right: 100%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: 10px;
+  top: 20px;
+  box-sizing: border-box; }
 
 h2.title {
   margin: 0 0 -10px 0;
@@ -40,7 +65,7 @@ p.content {
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-family: "Droid Sans", sans-serif;
   font-size: 40px;
-  text-decoration: underline; }
+  margin-top: 5px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:first-child {
   color: #333333; }

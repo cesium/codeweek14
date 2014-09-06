@@ -5,9 +5,7 @@ html.no-js lang="en"
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
       meta content="width=device-width, initial-scale=1.0" name="viewport"
         title CodeWeek @ UMinho
-        //meta content=("Blueprint: Vertical Timeline") name="description" /
         meta content="timeline, vertical, layout, style, component, web development, template, responsive" name="keywords" /
-        //meta content="Codrops" name="author" /
         link href="../favicon.ico" rel=("shortcut icon")
         link href="css/default.css" rel="stylesheet" type="text/css" /
         link href="css/component.css" rel="stylesheet" type="text/css" /
@@ -28,4 +26,6 @@ html.no-js lang="en"
                 h2.title = object[:title]
                 span.date-more = object[:date_more]
                 hr
+                - if object[:image]
+                  .starred style="background-image: url('img/#{object[:image]}')"
                 p.content = object[:content]
