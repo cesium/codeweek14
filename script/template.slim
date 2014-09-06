@@ -13,6 +13,15 @@ html.no-js lang="en"
         script src="js/modernizr.custom.js"
   body
     header
+    nav
+      ul
+        - days = ["11 Sab", "12 Dom", "13 Seg", "14 Ter", "15 Qua", "16 Qui", "17 Sex"]
+        - last = days.length - 1
+        - days.each_with_index do |day, index|
+          li
+            a data-target="#{day.downcase.delete(' ')}" = day
+            - unless index == last
+              span.separator = " |"
     .container
       .main
         ul.cbp_tmtimeline
@@ -20,7 +29,7 @@ html.no-js lang="en"
             li
               - if object[:date]
                 time.cbp_tmtime datetime=("2014-10-11 00:00")
-                  span.date = object[:date]
+                  span.date id="#{object[:date].downcase.delete(' ')}" = object[:date]
               .cbp_tmicon.cbp_tmicon-phone
               .cbp_tmlabel
                 h2.title = object[:title]

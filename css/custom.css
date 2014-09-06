@@ -1,17 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+body {
+  background-color: #F3F5F4; }
+
 header {
   height: 490px;
   width: 100%;
-  margin-bottom: 75px;
+  margin-bottom: 20px;
   background: url("../img/banner.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
-body {
-  background-color: #F3F5F4; }
+nav {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 99; }
+  nav ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0 auto; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        display: inline-block;
+        color: #333333;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        -o-transition: 0.4s color;
+        -ms-transition: 0.4s color;
+        -moz-transition: 0.4s color;
+        -webkit-transition: 0.4s color;
+        transition: 0.4s color; }
+        nav ul li a:hover, nav ul li a:focus {
+          border-bottom: 2px solid #ed7950; }
+
+.separator {
+  color: rgba(51, 51, 51, 0.4); }
+
+.active-link {
+  border-bottom: 1px solid #ed7950; }
+
+.container {
+  margin-top: 70px; }
 
 hr {
   opacity: 0.6;
@@ -25,7 +59,8 @@ hr {
   background-size: cover;
   width: 100%;
   height: 120px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  border-radius: 5px; }
 
 .cbp_tmtimeline > li .cbp_tmlabel {
   padding: 20px; }

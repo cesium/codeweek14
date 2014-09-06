@@ -1,18 +1,53 @@
 @import "settings"
 
+
+body
+  background-color: $bg-color
+
 header
   height: 490px
   width: 100%
-  margin-bottom: 75px
+  margin-bottom: 20px
   background: url($bg-image) no-repeat
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
 
+nav
+  width: 100%
+  margin: 0 auto
+  position: relative
+  z-index: 99
+  ul
+    list-style-type: none
+    width: 100%
+    margin: 0 auto
+    li
+      display: inline
+      a
+        display: inline-block
+        color: $dark-gray
+        cursor: pointer
+        font-family: $open
+        font-size: 16px
+        -o-transition: 0.4s color
+        -ms-transition: 0.4s color
+        -moz-transition: 0.4s color
+        -webkit-transition: 0.4s color
+        transition: 0.4s color
 
-body
-  background-color: $bg-color
+        &:hover, &:focus
+          border-bottom: 2px solid $cesium
+
+.separator
+  color: rgba($dark-gray, 0.4)
+
+.active-link
+  border-bottom: 1px solid $cesium
+
+.container
+  margin-top: 70px
 
 hr
   opacity: 0.6
@@ -27,7 +62,7 @@ hr
   width: 100%
   height: 120px
   margin-top: 10px
-//  border-radius: 5px
+  border-radius: 5px
 
 // Selectors to override the defaults from the event divs
 .cbp_tmtimeline > li .cbp_tmlabel
