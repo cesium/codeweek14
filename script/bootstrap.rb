@@ -3,7 +3,6 @@
 class Bootstrap
 	require 'rbconfig'
 	require_relative 'boot_config.rb'
-	require_relative 'generator.rb'
 
 	# Configure and install dependencies
 	def self.install
@@ -19,6 +18,9 @@ class Bootstrap
 
 		`bourbon install` unless File.directory?('scss/bourbon')
 	end
+
+
+	require_relative 'generator.rb'
 
 	# Generate the HTML index
 	def self.generate(target)
