@@ -19,11 +19,9 @@ class Bootstrap
 		`bourbon install` unless File.directory?('scss/bourbon')
 	end
 
-
-	require_relative 'generator.rb'
-
 	# Generate the HTML index
 	def self.generate(target)
+		require_relative 'generator.rb'
 		Generator::Base.new(target).generate
 	end
 
@@ -41,6 +39,7 @@ class Bootstrap
 
 	# Update changed sass files
 	def self.sass
+		require 'sass'
 		# Selects changed files using git
 		changed_sass = `git diff --name-only`.split("\n").select { |file| file.match(/sass\/[^\_].+/) }
 		# Generates the corresponding css file with the same name
@@ -49,6 +48,7 @@ class Bootstrap
 
 	# Generates HTML index and updates sass files
   def self.gen_sass(target)
+		require_relative 'generator.rb'
     Bootstrap.generate(target)
     Bootstrap.sass
   end
