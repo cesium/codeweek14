@@ -27,10 +27,10 @@ nav {
       display: inline; }
       nav ul li a {
         margin: auto 5px;
-        color: #333333;
         cursor: pointer;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
+        color: #333333;
         -o-transition: 0.4s color;
         -ms-transition: 0.4s color;
         -moz-transition: 0.4s color;
@@ -48,7 +48,7 @@ nav {
   color: rgba(51, 51, 51, 0.4); }
 
 .active-link {
-  border-bottom: 1px solid #ed7950; }
+  border-bottom: 2px solid #ed7950; }
 
 .container {
   margin-top: 70px; }
