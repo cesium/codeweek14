@@ -20,10 +20,12 @@ html.no-js lang="en"
         ul.cbp_tmtimeline
           - objects.each do |object|
             li
-              time.cbp_tmtime datetime=("2013-04-18 09:56")
-                span.date-more = object[:date_more]
-                span.date = object[:date]
+              - if object[:date]
+                time.cbp_tmtime datetime=("2014-10-11 00:00")
+                  span.date = object[:date]
               .cbp_tmicon.cbp_tmicon-phone
               .cbp_tmlabel
                 h2.title = object[:title]
+                span.date-more = object[:date_more]
+                hr
                 p.content = object[:content]

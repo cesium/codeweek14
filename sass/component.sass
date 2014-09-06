@@ -1,3 +1,5 @@
+@import "settings"
+
 @font-face
   font-family: 'ecoico'
   src: url('../fonts/timelineicons/ecoico.eot')
@@ -19,7 +21,7 @@
     top: 0
     bottom: 0
     width: 10px
-    background: #afdcf8
+    background: lighten($cesium, 20%)
     left: 20%
     margin-left: -10px
   > li
@@ -51,22 +53,6 @@
       border-radius: 5px
     &:nth-child(odd) .cbp_tmlabel
       background: #6cbfee
-    .cbp_tmlabel
-      h2
-        margin-top: 0px
-        padding: 0 0 10px 0
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4)
-      &:after
-        right: 100%
-        border: solid transparent
-        content: " "
-        height: 0
-        width: 0
-        position: absolute
-        pointer-events: none
-        border-right-color: #3594cb
-        border-width: 10px
-        top: 10px
     &:nth-child(odd) .cbp_tmlabel:after
       border-right-color: #6cbfee
     .cbp_tmicon
@@ -88,7 +74,6 @@
       box-shadow: 0 0 0 8px #afdcf8
       text-align: center
       left: 20%
-      top: 0
       margin: 0 0 0 -25px
 
 /* The line

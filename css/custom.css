@@ -13,9 +13,47 @@ header {
 body {
   background-color: #F3F5F4; }
 
+hr {
+  opacity: 0.6;
+  width: 50%;
+  height: 1px; }
+
+.cbp_tmtimeline > li .cbp_tmlabel {
+  padding: 20px; }
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+  background-color: #ed7950; }
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel {
+  background-color: #333333; }
+
 h2.title {
+  margin: 0 0 -10px 0;
   font-family: "Droid Sans", sans-serif; }
 
 p.content {
   font-family: "Open Sans", sans-serif;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-size: 16px;
+  text-align: justify; }
+
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+  font-family: "Droid Sans", sans-serif;
+  font-size: 40px;
+  text-decoration: underline; }
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:first-child {
+  color: #333333; }
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime span:first-child {
+  color: #ed7950; }
+
+.cbp_tmtimeline > li .cbp_tmicon {
+  background: #ed7950;
+  box-shadow: 0 0 0 10px #f7c0ac;
+  margin-top: 10px; }
+
+span.date-more {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #f1f1f1; }

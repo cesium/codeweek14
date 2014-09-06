@@ -14,9 +14,50 @@ header
 body
   background-color: $bg-color
 
+hr
+  opacity: 0.6
+  width: 50%
+  height: 1px
+
+// Selectors to override the defaults from the event divs
+.cbp_tmtimeline > li .cbp_tmlabel
+  padding: 20px
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel
+  background-color: $cesium
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel
+  background-color: $dark-gray
+
 h2.title
+  margin: 0 0 -10px 0
   font-family: $droid
 
 p.content
   font-family: $open
   font-weight: lighter
+  font-size: 16px
+  text-align: justify
+
+// Overrides the date on the left
+.cbp_tmtimeline > li .cbp_tmtime span:first-child
+  font-family: $droid
+  font-size: 40px
+  text-decoration: underline
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:first-child
+  color: $dark-gray
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime span:first-child
+  color: $cesium
+
+// Overrides icons
+.cbp_tmtimeline > li .cbp_tmicon
+  background: $cesium
+  box-shadow: 0 0 0 10px lighten($cesium, 20%)
+  margin-top: 10px
+
+span.date-more
+  font-family: $open
+  font-size: 14px
+  color: $light-gray
