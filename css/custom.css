@@ -110,12 +110,14 @@ hr {
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
   background-color: #ed7950; }
   .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel::after {
-    border-right-color: #ed7950; }
+    border-right-color: #ed7950;
+    border-bottom-color: #ed7950; }
 
 .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel {
   background-color: #333333; }
   .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel::after {
-    border-right-color: #333333; }
+    border-right-color: #333333;
+    border-bottom-color: #333333; }
 
 .cbp_tmlabel::after {
   right: 100%;
