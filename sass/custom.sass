@@ -90,6 +90,11 @@ hr
   &:hover
     color: $light-gray
 
+.cbp_tmtimeline
+  &::before
+    background: lighten($cesium, 20%)
+    margin-left: -20px
+
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup
   background-color: darken($cesium, 10%)
   &:hover
@@ -126,7 +131,7 @@ hr
   position: absolute
   pointer-events: none
   border-width: 10px
-  top: 35px
+  top: 25px
   box-sizing: border-box
 
 h2.title
@@ -161,7 +166,7 @@ p.content
   -o-background-size: cover
   background-size: cover
   box-shadow: 0 0 0 10px lighten($cesium, 20%)
-  margin: 10px 0 0 -40px
+  margin: 10px 0 0 -50px
   width: 70px
   height: 70px
   line-height: 70px

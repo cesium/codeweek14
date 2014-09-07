@@ -94,6 +94,10 @@ hr {
   .signup:hover {
     color: #f1f1f1; }
 
+.cbp_tmtimeline::before {
+  background: #f7c0ac;
+  margin-left: -20px; }
+
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup {
   background-color: #e85622; }
   .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup:hover {
@@ -128,7 +132,7 @@ hr {
   position: absolute;
   pointer-events: none;
   border-width: 10px;
-  top: 35px;
+  top: 25px;
   box-sizing: border-box; }
 
 h2.title {
@@ -161,7 +165,7 @@ p.content {
   -o-background-size: cover;
   background-size: cover;
   box-shadow: 0 0 0 10px #f7c0ac;
-  margin: 10px 0 0 -40px;
+  margin: 10px 0 0 -50px;
   width: 70px;
   height: 70px;
   line-height: 70px; }
