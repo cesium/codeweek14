@@ -32,13 +32,13 @@ html.no-js lang="en"
               - if object[:date]
                 time.cbp_tmtime datetime=("2014-10-11 00:00")
                   span.date id="#{object[:date].downcase.delete(' ')}" = object[:date]
-              .cbp_tmicon.cbp_tmicon-phone
+              .cbp_tmicon style="background-image: url('img/icons/#{object[:icon]}')"
               .cbp_tmlabel
                 h2.title
                   = object[:title]
                 span.date-more = object[:date_more]
                 - if object[:image]
-                  .starred style="background-image: url('img/#{object[:image]}')"
+                  .starred style="background-image: url('img/starred/#{object[:image]}')"
                 - else
                   hr
 

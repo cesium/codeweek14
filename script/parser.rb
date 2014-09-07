@@ -10,6 +10,7 @@ module Generator
     DATE_MORE = ':dm'
     IMAGE = ':i'
     SIGNUP = ':s'
+    ICON = ':ic'
 
     # [\s]* matches leading whitespaces
     # ([^#]*) captures the content in the content group
@@ -56,6 +57,8 @@ module Generator
         push_attribute(:date_more, Parser::DATE_MORE, str)
       when Parser.regex_matcher(DATE)
         push_attribute(:date, Parser::DATE, str)
+      when Parser.regex_matcher(ICON)
+          push_attribute(:icon, Parser::ICON, str)
       when Parser.regex_matcher(IMAGE)
         push_attribute(:image, Parser::IMAGE, str)
       when Parser.regex_matcher(SIGNUP)
