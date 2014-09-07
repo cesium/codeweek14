@@ -7,12 +7,17 @@ html.no-js lang="en"
         title CodeWeek @ UMinho
         meta content="timeline, vertical, layout, style, component, web development, template, responsive" name="keywords" /
         link href="../favicon.ico" rel=("shortcut icon")
-        link href="css/default.css" rel="stylesheet" type="text/css" /
-        link href="css/component.css" rel="stylesheet" type="text/css" /
-        link href="css/custom.css" rel="stylesheet" type="text/css" /
+        link href="css/normalize.css" rel="stylesheet" type="text/css"
+        link href="css/default.css" rel="stylesheet" type="text/css"
+        link href="css/component.css" rel="stylesheet" type="text/css"
+        link href="css/custom.css" rel="stylesheet" type="text/css"
+        link href="css/fontello.css" rel="stylesheet" type="text/css"
+        link href="css/foundation.css" rel="stylesheet" type="text/css"
         script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
         script src="js/modernizr.custom.js"
+        script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"
         script src="js/nav.js"
+        script src="js/map.js"
   body
     header
     nav
@@ -43,3 +48,44 @@ html.no-js lang="en"
                   .starred style="background-image: url('img/starred/#{object[:image]}')"
 
                 p.content = object[:content]
+
+        .info-container
+          ul.small-block-grid-2
+            li
+              h2 Localização
+              #map-canvas
+            li
+              .row
+                h2 Parceiros
+                ul.small-block-grid-4
+                  li
+                    a href="http://www.uminho.pt" target="_blank"
+                      .partner style="background-image: url('img/partners/um.jpg')"
+                  li
+                    a href="http://www.eng.uminho.pt" target="_blank"
+                      .partner style="background-image: url('img/partners/ee.png')"
+                  li
+                    a href="http://www.di.uminho.pt" target="_blank"
+                      .partner style="background-image: url('img/partners/di.png')"
+                  li
+                    a href="http://www.groupbuddies.com" target="_blank"
+                      .partner style="background-image: url('img/partners/gb3.png')"
+              .row
+                h2 Contactos
+                ul.contacts
+                  li.icon-web
+                    a href="http://www.cesium.di.uminho.pt" target="_blank" cesium.di.uminho.pt
+                  li.icon-mail
+                    a href="mailto:cesium@di.uminho.pt" target="_blank" cesium@di.uminho.pt
+                  li.icon-facebook
+                    a href="https://facebook.com/cesiumUM" target="_blank" cesiumUM
+                  li.icon-twitter
+                    a href="https://twitter.com/cesiuminho" target="_blank" cesiuminho
+                  li.icon-github
+                    a href="https://github.com/Cesium" target="_blank" Cesium
+
+
+
+    script src="js/foundation.min.js"
+    javascript:
+      $(document).foundation();
