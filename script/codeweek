@@ -1,13 +1,26 @@
+# # Comentários
+# :t = Título do evento
+# :c = Conteúdo/descrição do evento
+# :d = Data
+# :dm = Date more - hora e local
+# :s = Signup - link das inscrições
+# :i = Imagem, para os eventos com destaque. Basta pôr o nome da imagem e colocar em img/starred/
+# :ic = Icone, basta pôr o nome da imagem e colocar em img/icons/
+# Se for preciso usar um #, \# faz escape do #
+# Para voltar a gerar a página: ruby script/bootstrap.rb generate path/to/file (neste caso script/codeweek)
+# Para gerar o sass: ruby script/bootstrap.rb sass
+# Para fazer ambos: ruby script/bootstrap.rb gen_sass path/to/file
+
 :t CoderDojo Minho
 :c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 :d 11 Sab
-:dm 18h @ DI A2
+:dm 18h @ DI 0.02
 :s \#
 :ic coderdojo.png
 
 :t Improve Braga
 :c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-:dm 18h @ DI A2
+:dm 18h @ DI 0.02
 :s \#
 
 :t Rails Girls Braga
@@ -23,7 +36,7 @@
 
 :t DI Goes Retro
 :c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-:dm 18h @ DI A2
+:dm 14h-18h @ Largo do DI
 :i retro.jpg
 :ic retro.png
 
