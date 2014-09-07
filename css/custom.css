@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@font-face {
+  font-family: "Mohave";
+  src: url("../font/Mohave.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
 body {
   background-color: #F3F5F4; }
 
@@ -162,3 +167,39 @@ span.date-more {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #f1f1f1; }
+
+.info-container {
+  margin: 50px 0 100px 0; }
+  .info-container h2 {
+    font-family: "Droid Sans", sans-serif;
+    color: #333333; }
+  .info-container ul {
+    list-style-type: none; }
+  .info-container li {
+    margin: 0px;
+    padding: 0px; }
+
+#map-canvas {
+  width: 400px;
+  height: 400px;
+  border-radius: 5px; }
+  #map-canvas img {
+    max-width: none; }
+
+.partner {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px; }
+
+.contacts {
+  padding: 0; }
+  .contacts li {
+    margin-bottom: 5px; }
+  .contacts a {
+    font-family: "Mohave", sans-serif;
+    font-size: 20px;
+    color: #333333; }
