@@ -4,6 +4,6 @@
 module BootConfig
   TEMPLATE = 'script/template.slim'
   TARGET = 'index.html'
-  DEPENDS = %w(sass slim tilt bourbon)
+  DEPENDS = %w(sass slim tilt)
   ROOT = 'Code-Week-DI-14'
 end

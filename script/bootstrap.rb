@@ -15,8 +15,6 @@ class Bootstrap
 				puts "Installed #{gem}"
 			end
 		end
-
-		`bourbon install` unless File.directory?('scss/bourbon')
 	end
 
 	# Generate the HTML index

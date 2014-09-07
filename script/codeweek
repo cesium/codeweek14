@@ -1,6 +1,6 @@
 # # Comentários
 # :t = Título do evento
-# :c = Conteúdo/descrição do evento
+# :c = Conteúdo/descrição do evento. Para adicionar um linebreak, usa-se <br> Linhas sem indicador a meio do ficheiro são adicionadas ao conteúdo mais recente.
 # :d = Data
 # :dm = Date more - hora e local
 # :s = Signup - link das inscrições
@@ -10,6 +10,7 @@
 # Para voltar a gerar a página: ruby script/bootstrap.rb generate path/to/file (neste caso script/codeweek)
 # Para gerar o sass: ruby script/bootstrap.rb sass
 # Para fazer ambos: ruby script/bootstrap.rb gen_sass path/to/file
+# Para instalar dependências: ruby script/bootstrap.rb install
 
 :t CoderDojo Minho
 :c Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
