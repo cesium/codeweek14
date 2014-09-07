@@ -70,6 +70,7 @@ hr {
 
 .signup {
   cursor: pointer;
+  float: right;
   padding: 10px;
   border-radius: 5px;
   width: intrinsic;
@@ -119,7 +120,7 @@ hr {
   position: absolute;
   pointer-events: none;
   border-width: 10px;
-  top: 35px;
+  top: 20px;
   box-sizing: border-box; }
 
 h2.title {
@@ -135,8 +136,7 @@ p.content {
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-family: "Droid Sans", sans-serif;
   font-size: 40px;
-  margin-top: 15px;
-  text-align: center; }
+  margin-top: 5px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:first-child {
   color: #333333; }
@@ -146,16 +146,8 @@ p.content {
 
 .cbp_tmtimeline > li .cbp_tmicon {
   background: #ed7950;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   box-shadow: 0 0 0 10px #f7c0ac;
-  margin: 10px 0 0 -40px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px; }
+  margin-top: 10px; }
 
 span.date-more {
   font-family: "Open Sans", sans-serif;
