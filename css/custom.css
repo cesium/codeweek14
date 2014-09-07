@@ -26,7 +26,7 @@ nav {
     nav ul li {
       display: inline; }
       nav ul li a {
-        margin: auto 5px;
+        margin: auto 15px;
         cursor: pointer;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
@@ -67,6 +67,36 @@ hr {
   height: 120px;
   margin-top: 10px;
   border-radius: 5px; }
+
+.signup {
+  cursor: pointer;
+  float: right;
+  padding: 10px;
+  border-radius: 20px;
+  width: intrinsic;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  color: #f1f1f1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  -o-transition: 0.4s background-color;
+  -ms-transition: 0.4s background-color;
+  -moz-transition: 0.4s background-color;
+  -webkit-transition: 0.4s background-color;
+  transition: 0.4s background-color; }
+  .signup:hover {
+    color: #f1f1f1; }
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup {
+  background-color: #e85622; }
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup:hover {
+    background-color: #eb6739; }
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup {
+  background-color: #1a1a1a; }
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup:hover {
+    background-color: #262626; }
 
 .cbp_tmtimeline > li .cbp_tmlabel {
   padding: 20px; }

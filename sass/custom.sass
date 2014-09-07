@@ -1,6 +1,5 @@
 @import "settings"
 
-
 body
   background-color: $bg-color
 
@@ -27,7 +26,7 @@ nav
     li
       display: inline
       a
-        margin: auto 5px
+        margin: auto 15px
         cursor: pointer
         font-family: $open
         font-size: 16px
@@ -69,6 +68,37 @@ hr
   height: 120px
   margin-top: 10px
   border-radius: 5px
+
+.signup
+  cursor: pointer
+  float: right
+  padding: 10px
+  border-radius: 20px
+  width: intrinsic
+  width: -moz-max-content
+  width: -webkit-max-content
+  color: $light-gray
+  font-family: $open
+  font-size: 16px
+  font-weight: lighter
+  -o-transition: 0.4s background-color
+  -ms-transition: 0.4s background-color
+  -moz-transition: 0.4s background-color
+  -webkit-transition: 0.4s background-color
+  transition: 0.4s background-color
+  &:hover
+    color: $light-gray
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup
+  background-color: darken($cesium, 10%)
+  &:hover
+    background-color: darken($cesium, 5%)
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup
+  background-color: darken($dark-gray, 10%)
+  &:hover
+    background-color: darken($dark-gray, 5%)
+
 
 // Selectors to override the defaults from the event divs
 .cbp_tmtimeline > li .cbp_tmlabel

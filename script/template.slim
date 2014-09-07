@@ -34,7 +34,10 @@ html.no-js lang="en"
                   span.date id="#{object[:date].downcase.delete(' ')}" = object[:date]
               .cbp_tmicon.cbp_tmicon-phone
               .cbp_tmlabel
-                h2.title = object[:title]
+                h2.title
+                  = object[:title]
+                  - if object[:signup]
+                    a.signup href="#{object[:signup]}" Inscrições
                 span.date-more = object[:date_more]
                 hr
                 - if object[:image]
