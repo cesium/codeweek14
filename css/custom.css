@@ -19,38 +19,6 @@ header {
   -o-background-size: contain;
   background-size: contain; }
 
-/* Hiding the nav on smaller devices */
-@media only screen and (max-width: 767px) {
-  nav {
-    display: none; } }
-/* Large devices ----------- */
-/* Only display the nav on large devices */
-@media only screen and (min-width: 768px) {
-  nav {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    background-color: #F3F5F4;
-    height: 50px; }
-    nav ul {
-      list-style-type: none;
-      display: inline-block;
-      width: 100%; }
-      nav ul li {
-        display: inline; }
-        nav ul li a {
-          margin: auto 15px;
-          cursor: pointer;
-          font-family: "Open Sans", sans-serif;
-          font-size: 14px;
-          color: #333333;
-          -o-transition: 0.4s color;
-          -ms-transition: 0.4s color;
-          -moz-transition: 0.4s color;
-          -webkit-transition: 0.4s color;
-          transition: 0.4s color; }
-          nav ul li a:hover, nav ul li a:focus {
-            border-bottom: 2px solid #ed7950; } }
 .fixed {
   position: fixed;
   top: 0;
@@ -224,6 +192,42 @@ span.date-more {
     font-size: 20px;
     color: #333333; }
 
+@media only screen and (max-width: 767px) {
+  /* Hiding the nav on smaller devices */
+  nav {
+    display: none; }
+
+  /* Hiding the icons on smaller devices */
+  .cbp_tmtimeline > li .cbp_tmicon {
+    margin: 10px 10px 0 0px; } }
+/* Large devices ----------- */
+/* Only display the nav on large devices */
+@media only screen and (min-width: 768px) {
+  nav {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: #F3F5F4;
+    height: 50px; }
+    nav ul {
+      list-style-type: none;
+      display: inline-block;
+      width: 100%; }
+      nav ul li {
+        display: inline; }
+        nav ul li a {
+          margin: auto 15px;
+          cursor: pointer;
+          font-family: "Open Sans", sans-serif;
+          font-size: 14px;
+          color: #333333;
+          -o-transition: 0.4s color;
+          -ms-transition: 0.4s color;
+          -moz-transition: 0.4s color;
+          -webkit-transition: 0.4s color;
+          transition: 0.4s color; }
+          nav ul li a:hover, nav ul li a:focus {
+            border-bottom: 2px solid #ed7950; } }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .signup {
@@ -235,10 +239,7 @@ span.date-more {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; }
-
-  .cbp_tmtimeline > li .cbp_tmicon {
-    margin: 10px 10px 0 0px; } }
+    background-size: cover; } }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
   /* Smaller map on portrait mode */

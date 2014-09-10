@@ -14,41 +14,6 @@ header
   -o-background-size: contain
   background-size: contain
 
-/* Hiding the nav on smaller devices */
-@media only screen and (max-width: 767px)
-  nav
-    display: none
-
-/* Large devices ----------- */
-/* Only display the nav on large devices */
-@media only screen and (min-width : 768px)
-  nav
-    width: 100%
-    position: relative
-    text-align: center
-    background-color: $bg-color
-    height: 50px
-    ul
-      list-style-type: none
-      display: inline-block
-      width: 100%
-      li
-        display: inline
-        a
-          margin: auto 15px
-          cursor: pointer
-          font-family: $open
-          font-size: 14px
-          color: $dark-gray
-          -o-transition: 0.4s color
-          -ms-transition: 0.4s color
-          -moz-transition: 0.4s color
-          -webkit-transition: 0.4s color
-          transition: 0.4s color
-
-          &:hover, &:focus
-            border-bottom: 2px solid $cesium
-
 .fixed
   position: fixed
   top: 0
@@ -229,6 +194,43 @@ span.date-more
     font-size: 20px
     color: $dark-gray
 
+@media only screen and (max-width: 767px)
+  /* Hiding the nav on smaller devices */
+  nav
+    display: none
+  /* Hiding the icons on smaller devices */
+  .cbp_tmtimeline > li .cbp_tmicon
+    margin: 10px 10px 0 0px
+
+/* Large devices ----------- */
+/* Only display the nav on large devices */
+@media only screen and (min-width : 768px)
+  nav
+    width: 100%
+    position: relative
+    text-align: center
+    background-color: $bg-color
+    height: 50px
+    ul
+      list-style-type: none
+      display: inline-block
+      width: 100%
+      li
+        display: inline
+        a
+          margin: auto 15px
+          cursor: pointer
+          font-family: $open
+          font-size: 14px
+          color: $dark-gray
+          -o-transition: 0.4s color
+          -ms-transition: 0.4s color
+          -moz-transition: 0.4s color
+          -webkit-transition: 0.4s color
+          transition: 0.4s color
+
+          &:hover, &:focus
+            border-bottom: 2px solid $cesium
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
@@ -241,8 +243,6 @@ span.date-more
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
-  .cbp_tmtimeline > li .cbp_tmicon
-    margin: 10px 10px 0 0px
 
 
 /* Smartphones (portrait) ----------- */
