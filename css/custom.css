@@ -219,8 +219,8 @@ span.date-more {
     color: #333333; }
 
 /* Smartphones (portrait and landscape) ----------- */
+/* Don't display the nav on small screens */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Don't display the nav on small screens */
   nav {
     display: none; }
 
