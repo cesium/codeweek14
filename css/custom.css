@@ -45,10 +45,6 @@ nav {
         nav ul li a:hover, nav ul li a:focus {
           border-bottom: 2px solid #ed7950; }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  nav {
-    display: none; } }
 .fixed {
   position: fixed;
   top: 0;
@@ -95,7 +91,7 @@ hr {
   -moz-transition: 0.4s background-color;
   -webkit-transition: 0.4s background-color;
   transition: 0.4s background-color; }
-  .signup:hover {
+  .signup:hover, .signup:focus {
     color: #f1f1f1; }
 
 .cbp_tmtimeline::before {
@@ -104,12 +100,12 @@ hr {
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup {
   background-color: #e85622; }
-  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup:hover {
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup:hover, .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel .signup:focus {
     background-color: #eb6739; }
 
 .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup {
   background-color: #1a1a1a; }
-  .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup:hover {
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup:hover, .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel .signup:focus {
     background-color: #262626; }
 
 .cbp_tmtimeline > li .cbp_tmlabel {
@@ -221,3 +217,17 @@ span.date-more {
     font-family: "Mohave", sans-serif;
     font-size: 20px;
     color: #333333; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Don't display the nav on small screens */
+  nav {
+    display: none; }
+
+  #map-canvas {
+    width: 300px;
+    height: 300px; }
+
+  .signup {
+    width: 80px;
+    heidht: 50px; } }
