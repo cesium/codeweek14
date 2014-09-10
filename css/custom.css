@@ -227,20 +227,15 @@ span.date-more {
     float: none; }
   .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
     float: none;
-    margin-left: 15px; } }
-.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime span:first-child {
-  color: #333333;
-  margin-top: 7px;
-  margin-right: 25px;
-  display: inline;
-  float: right;
-  font-size: 1.2em; }
-.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime span:last-child {
-  color: #333333;
-  display: inline;
-  font-size: 2.5em;
-  float: right; }
+    margin-left: 15px; }
 
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmtime span:first-child {
+    margin: 25px 25px -30px 65px;
+    display: block;
+    float: none; }
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmtime span:last-child {
+    float: none;
+    margin-left: 15px; } }
 /* Large devices ----------- */
 /* Only display the nav on large devices */
 @media only screen and (min-width: 768px) {
