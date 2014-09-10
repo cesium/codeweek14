@@ -224,6 +224,30 @@ span.date-more
   .cbp_tmtimeline > li .cbp_tmicon
     margin: 10px 10px 0 0px
 
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime
+    span:first-child
+      margin: 25px 25px -30px 65px
+      display: block
+      float: none
+    span:last-child
+      float: none
+      margin-left: 15px
+
+.cbp_tmtimeline > li:nth-child(even) .cbp_tmtime
+  span:first-child
+    color: $dark-gray
+    margin-top: 7px
+    margin-right: 25px
+    display: inline
+    float: right
+    font-size: 1.2em
+  span:last-child
+    color: $dark-gray
+    display: inline
+    font-size: 2.5em
+    float: right
+
+
 /* Large devices ----------- */
 /* Only display the nav on large devices */
 @media only screen and (min-width : 768px)
