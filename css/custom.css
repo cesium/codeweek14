@@ -229,9 +229,8 @@ span.date-more {
     height: 300px; }
 
   .signup {
-    width: 80px;
-    float: left;
-    display: block; }
+    width: auto;
+    float: right; }
 
   .starred {
     background-position: center center;
