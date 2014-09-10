@@ -19,32 +19,38 @@ header {
   -o-background-size: contain;
   background-size: contain; }
 
-nav {
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background-color: #F3F5F4;
-  height: 50px; }
-  nav ul {
-    list-style-type: none;
-    display: inline-block;
-    width: 100%; }
-    nav ul li {
-      display: inline; }
-      nav ul li a {
-        margin: auto 15px;
-        cursor: pointer;
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        color: #333333;
-        -o-transition: 0.4s color;
-        -ms-transition: 0.4s color;
-        -moz-transition: 0.4s color;
-        -webkit-transition: 0.4s color;
-        transition: 0.4s color; }
-        nav ul li a:hover, nav ul li a:focus {
-          border-bottom: 2px solid #ed7950; }
-
+/* Hiding the nav on smaller devices */
+@media only screen and (max-width: 767px) {
+  nav {
+    display: none; } }
+/* Large devices ----------- */
+/* Only display the nav on large devices */
+@media only screen and (min-width: 768px) {
+  nav {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: #F3F5F4;
+    height: 50px; }
+    nav ul {
+      list-style-type: none;
+      display: inline-block;
+      width: 100%; }
+      nav ul li {
+        display: inline; }
+        nav ul li a {
+          margin: auto 15px;
+          cursor: pointer;
+          font-family: "Open Sans", sans-serif;
+          font-size: 14px;
+          color: #333333;
+          -o-transition: 0.4s color;
+          -ms-transition: 0.4s color;
+          -moz-transition: 0.4s color;
+          -webkit-transition: 0.4s color;
+          transition: 0.4s color; }
+          nav ul li a:hover, nav ul li a:focus {
+            border-bottom: 2px solid #ed7950; } }
 .fixed {
   position: fixed;
   top: 0;
@@ -219,15 +225,7 @@ span.date-more {
     color: #333333; }
 
 /* Smartphones (portrait and landscape) ----------- */
-/* Don't display the nav on small screens */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  nav {
-    display: none; }
-
-  #map-canvas {
-    width: 250px;
-    height: 250px; }
-
   .signup {
     width: auto;
     float: right; }
@@ -241,3 +239,14 @@ span.date-more {
 
   .cbp_tmtimeline > li .cbp_tmicon {
     margin: 10px 10px 0 0px; } }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Smaller map on portrait mode */
+  #map-canvas {
+    width: 250px;
+    height: 250px; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) and (max-device-width: 480px) {
+  #map-canvas {
+    width: 350px;
+    height: 350px; } }
