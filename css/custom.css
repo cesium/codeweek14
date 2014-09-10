@@ -219,21 +219,3 @@ span.date-more {
     color: #333333; }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Don't display the nav on small screens */
-  nav {
-    display: none; }
-
-  #map-canvas {
-    width: 300px;
-    height: 300px; }
-
-  .signup {
-    width: 80px;
-    heidht: 50px; }
-
-  .starred {
-    background-position: center center; }
-
-  .cbp_tmtimeline > li .cbp_tmicon {
-    margin: 10px 10px 0 0px; } }

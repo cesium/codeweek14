@@ -223,8 +223,8 @@ span.date-more
 
 
 /* Smartphones (portrait and landscape) ----------- */
-// @media screen and (max-width: 47.2em)
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+@media screen and (max-width: 47.2em)
+//@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
   /* Don't display the nav on small screens */
   nav
     display: none
@@ -234,7 +234,12 @@ span.date-more
   .signup
     width: 80px
     heidht: 50px
+    float: right
   .starred
     background-position: center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
   .cbp_tmtimeline > li .cbp_tmicon
     margin: 10px 10px 0 0px
