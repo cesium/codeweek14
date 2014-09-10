@@ -45,6 +45,10 @@ nav {
         nav ul li a:hover, nav ul li a:focus {
           border-bottom: 2px solid #ed7950; }
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  nav {
+    display: none; } }
 .fixed {
   position: fixed;
   top: 0;
