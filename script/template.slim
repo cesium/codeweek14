@@ -36,7 +36,9 @@ html.no-js lang="en"
             li
               - if object[:date]
                 time.cbp_tmtime datetime=("2014-10-11 00:00")
-                  span.date id="#{object[:date].downcase.delete(' ')}" = object[:date]
+                  - date = object[:date].split
+                  span.date id="#{object[:date].downcase.delete(' ')}" = date[1]
+                  span = date[0]
               .cbp_tmicon style="background-image: url('img/icons/#{object[:icon]}')"
               .cbp_tmlabel
                 h2.title
