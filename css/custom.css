@@ -52,6 +52,7 @@ hr {
   cursor: pointer;
   float: right;
   padding: 10px;
+  margin-top: -25px;
   border-radius: 5px;
   width: intrinsic;
   width: -moz-max-content;
@@ -232,7 +233,9 @@ span.date-more {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .signup {
     width: auto;
-    float: right; }
+    padding: 5px;
+    font-size: 11px;
+    margin-top: 0px; }
 
   .starred {
     background-position: center center;

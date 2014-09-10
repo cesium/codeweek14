@@ -41,9 +41,9 @@ html.no-js lang="en"
               .cbp_tmlabel
                 h2.title
                   = object[:title]
-                  - if object[:signup]
-                    a.signup href="#{object[:signup]}" Inscrições
                 span.date-more = object[:date_more]
+                - if object[:signup]
+                  a.signup href="#{object[:signup]}" Inscrições
                 - if object[:image]
                   .starred style="background-image: url('img/starred/#{object[:image]}')"
 
