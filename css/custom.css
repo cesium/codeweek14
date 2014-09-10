@@ -230,8 +230,9 @@ span.date-more {
 
   .signup {
     width: 80px;
-    heidht: 50px;
-    float: right; }
+    float: right;
+    margin-right: 0;
+    padding: 5px; }
 
   .starred {
     background-position: center center;
