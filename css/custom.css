@@ -230,4 +230,10 @@ span.date-more {
 
   .signup {
     width: 80px;
-    heidht: 50px; } }
+    heidht: 50px; }
+
+  .starred {
+    background-position: center center; }
+
+  .cbp_tmtimeline > li .cbp_tmicon {
+    margin: 10px 10px 0 0px; } }
