@@ -6,8 +6,7 @@ var activateNav = function() {
   var navHeight = nav.height() + nav.outerHeight();
 
   $(window).scroll(function() {
-    var navPosition = $( window ).height() - nav.offset().top + navHeight;
-
+    var navPosition = parseInt($('header').css('padding-bottom')) + parseInt($('header').css('margin-bottom')) + $('nav').height() - $('nav').outerHeight();
     if ($(window).scrollTop() > navPosition) {
       nav.addClass('fixed');
       bodyContainer.css('margin-top', marginFix + 'px');
