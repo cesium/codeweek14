@@ -52,9 +52,11 @@ hr {
 
 .signup {
   cursor: pointer;
+  display: inline;
   float: right;
   padding: 10px;
   margin-top: -25px;
+  margin-bottom: 10px;
   border-radius: 5px;
   width: intrinsic;
   width: -moz-max-content;
@@ -266,7 +268,7 @@ span.date-more {
           nav ul li a:hover, nav ul li a:focus {
             border-bottom: 2px solid #ed7950; } }
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   .starred {
     background-position: center center;
     -webkit-background-size: cover;
@@ -276,6 +278,7 @@ span.date-more {
 
   .signup {
     margin-top: 10px;
+    margin-bottom: 0px;
     display: block;
     float: none;
     text-align: center; } }
@@ -286,7 +289,7 @@ span.date-more {
     width: 250px;
     height: 250px; } }
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) and (max-device-width: 480px) {
+@media only screen and (min-width: 321px) and (max-width: 480px) {
   #map-canvas {
     width: 350px;
     height: 350px; } }
