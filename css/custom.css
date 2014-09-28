@@ -35,6 +35,16 @@ header {
 .container {
   margin-top: 70px; }
 
+.reference {
+  color: #CC2523;
+  border-bottom: 1px #CC2523 dotted;
+}
+
+.reference:hover, .reference:focus {
+  color: #992121;
+  border-bottom: 1px #992121 solid;
+}
+
 hr {
   opacity: 0.6;
   width: 75%; }
